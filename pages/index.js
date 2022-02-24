@@ -113,11 +113,11 @@ export default function Home() {
               <Form.Label>URL</Form.Label>
               <Form.Control name="url" type="url" defaultValue={pageData.url} title={pageData.url} required />
             </Form.Group>
-            {/* <Form.Group>
+            <Form.Group>
               <Form.Label>Languages</Form.Label>
               <Form.Control name="languages" type="text" />
               <Form.Text muted>Separate Languages with Commas</Form.Text>
-            </Form.Group> */}
+            </Form.Group>
             <Form.Group>
               <Form.Label>Tags</Form.Label>
               <Form.Control name="tags" type="text" />
