@@ -1,0 +1,55 @@
+{
+  "name": "notion-bookmarks",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev-extension": "npm-watch",
+    "lint": "next lint --no-error-on-unmatched-pattern",
+    "lint:build": "mv out/_next out/assets && sed -i 's/\\/_next/\\/assets/g' out/**.html",
+    "analyze": "next build --analyze",
+    "build": "next build && next export && npm run lint:build",
+    "start": "next start",
+    "format-check": "prettier --check \"**/*.js\"",
+    "format": "prettier --write \"**/*.js\""
+  },
+  "dependencies": {
+    "@notionhq/client": "^0.4.13",
+    "bootstrap": "^4.6.1",
+    "next": "12.0.7",
+    "node-sass": "^5.0.0",
+    "react": "17.0.2",
+    "react-bootstrap": "^1.6.4",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^11.1.3",
+    "eslint": "8.6.0",
+    "eslint-config-next": "12.0.7",
+    "eslint-config-prettier": "6.15.0",
+    "eslint-plugin-prettier": "3.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "npm-watch": "^0.11.0",
+    "prettier": "2.5.1"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "styles/**",
+        "pages/**",
+        "public/**",
+        "helpers/**",
+        "next.config.js"
+      ],
+      "ignore": [
+        "out",
+        "node_modules",
+        ".next",
+        ".vscode"
+      ],
+      "extensions": [
+        "js",
+        "json"
+      ]
+    }
+  }
+}
